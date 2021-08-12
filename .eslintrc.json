@@ -26,6 +26,8 @@
         "keyword-spacing": ["error", { "before": true }],
         "space-before-blocks": ["error"],
         "indent": ["error", 2, { "SwitchCase": 1 }],
-        "@typescript-eslint/no-non-null-assertion": ["off"]
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "no-unused-vars": ["off"],
+        "@typescript-eslint/no-unused-vars": ["off"]
     }
 }

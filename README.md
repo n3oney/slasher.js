@@ -1,4 +1,10 @@
 # slasher.js - a slash command framework for Discord.js
+<div align="center">
+  <a href="https://www.npmjs.com/package/slasher.js"><img src="https://img.shields.io/npm/v/slasher.js?maxAge=3600" alt="NPM version" /></a>
+  <a href="https://www.npmjs.com/package/slasher.js"><img src="https://img.shields.io/npm/dt/slasher.js"
+  alt="NPM downloads" /></a>
+</div>
+
 #### Note: This framework is not yet stable, although it does have enough functionality to let you create a Discord bot that uses slash commands.
 
 ## Why?

@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es6",
+    "target": "es5",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
+    "lib": ["ES2019"],
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true
   },
   "exclude": [

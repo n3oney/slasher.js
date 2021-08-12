@@ -18,13 +18,14 @@
     },
     "rules": {
         "no-console": "off",
-        "linebreak-style": "off",
         "quotes": [
             "error",
             "single",
             { "allowTemplateLiterals": true }
         ],
         "keyword-spacing": ["error", { "before": true }],
-        "space-before-blocks": ["error"]
+        "space-before-blocks": ["error"],
+        "indent": ["error", 2, { "SwitchCase": 1 }],
+        "@typescript-eslint/no-non-null-assertion": ["off"]
     }
 }

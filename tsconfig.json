@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "downlevelIteration": true,
+    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   },
   "exclude": [

@@ -38,7 +38,6 @@ type PingProps = {
 
 export class PingCommand extends SlasherCommand<PingProps> {
   async run(context: SlasherContext<PingProps>) {
-    console.log(context.props);
     context.interaction.reply({
       content: context.props.pong ? 'Pong!' : 'Yeah, I\'m working fine.'
     });

@@ -1,6 +1,6 @@
 {
   "name": "slasher.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A framework for Discord slash commands based on Discord.js.",
   "main": "dist/slasher.js",
   "types": "dist/slasher.d.ts",

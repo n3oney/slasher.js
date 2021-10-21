@@ -4,13 +4,13 @@ import { SlasherCommand } from '../structures/SlasherCommand';
 import { SlasherContext } from '../structures/SlasherContext';
 import { CachedManager } from './CachedManager';
 
-export class CommandManager extends CachedManager<Snowflake, SlasherCommand<never>> {
+export class CommandManager extends CachedManager<string, SlasherCommand<never>> {
   public async registerCommands(commands: { new(client: SlasherClient): SlasherCommand<never> }[]): Promise<CommandManager> {
     for (const Command of commands) {
       const instance = new Command(this.client);
 
       await this.createCommand(instance);
-      this._add(instance);
+      this._add(instance, instance.name.toLowerCase());
     }
 
     return this;
@@ -49,7 +49,7 @@ export class CommandManager extends CachedManager<Snowflake, SlasherCommand<neve
   private async _handleInteraction(interaction: Interaction) {
     if (!interaction.isCommand()) return;
 
-    const command = this.cache.get(interaction.commandId);
+    const command = this.cache.get(interaction.commandName.toLowerCase());
     if (!command) return interaction.reply({
       embeds: [
         new MessageEmbed()

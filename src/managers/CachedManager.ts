@@ -17,10 +17,10 @@ export abstract class CachedManager<K, V> extends Base {
     return this._cache;
   }
 
-  protected _add(data: V | { id: K } & V, id?: K): V {
-    if (!('id' in data) && !id) throw new SlasherError('Missing ID.');
-    this._cache.set('id' in data ? data.id : id!, data);
+  protected _add(value: V, key: K): V {
+    if (!('id' in value) && !key) throw new SlasherError('Missing ID.');
+    this._cache.set(key, value);
 
-    return data;
+    return value;
   }
 }
